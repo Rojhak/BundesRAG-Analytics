@@ -41,21 +41,25 @@ This project implements a comprehensive analysis system for German parliamentary
 - **Interactive UI**: Streamlit for the web interface
 - **Data Processing**: Efficient batch processing of parliamentary data
 
-## Project Structure
+## Directory Structure
 ```
-rag_model/
-├── data_processing/
-│   ├── new_enhanced_cleaning.py    # Initial CSV cleaning
-│   └── process_cleaned_files.py    # JSON conversion
-├── assets/                         # Images and static files
-├── vector_store/                   # FAISS index storage
-├── main_app.py                     # Main Streamlit application
-├── retriever.py                    # Core retrieval functionality
-├── creat_summary.py               # Text summarization
-├── creat_faiss_index.py           # Vector database management
-└── requirements.txt               # Project dependencies
+bundestag-speech-analysis/
+├── rag_model/
+│   ├── assets/              # Store your application assets
+│   ├── data_processing/     # Data processing scripts
+│   ├── vector_store/       # FAISS index storage (auto-created)
+│   ├── main_app.py         # Main Streamlit application
+│   ├── retriever.py        # Core retrieval functionality
+│   ├── creat_summary.py    # Text summarization
+│   └── creat_faiss_index.py # Vector database management
+├── data/                   # Dataset directory
+│   ├── raw/               # Raw data storage
+│   ├── cleaned/           # Cleaned data output
+│   └── processed/         # Final processed data
+└── requirements.txt       # Project dependencies
 ```
 
+**Note**: The `assets` and `vector_store` directories will be created during setup. You'll need to add your own application assets (logo and profile images) to the assets directory.
 ## Setup Instructions
 1. Clone the repository:
 ```bash
@@ -91,25 +95,6 @@ python -m spacy download de_core_news_sm
 streamlit run main_app.py
 ```
 
-## Directory Structure
-```
-bundestag-speech-analysis/
-├── rag_model/
-│   ├── assets/              # Store your application assets
-│   ├── data_processing/     # Data processing scripts
-│   ├── vector_store/       # FAISS index storage (auto-created)
-│   ├── main_app.py         # Main Streamlit application
-│   ├── retriever.py        # Core retrieval functionality
-│   ├── creat_summary.py    # Text summarization
-│   └── creat_faiss_index.py # Vector database management
-├── data/                   # Dataset directory
-│   ├── raw/               # Raw data storage
-│   ├── cleaned/           # Cleaned data output
-│   └── processed/         # Final processed data
-└── requirements.txt       # Project dependencies
-```
-
-**Note**: The `assets` and `vector_store` directories will be created during setup. You'll need to add your own application assets (logo and profile images) to the assets directory.
 
 ## Configuration
 Before running the application, you'll need to:
