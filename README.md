@@ -95,17 +95,21 @@ streamlit run main_app.py
 ```
 bundestag-speech-analysis/
 ├── rag_model/
-│   ├── assets/              # Create this directory
-│   │   ├── image.png       # Add your logo
-│   │   └── cover.jpg       # Add your profile image
-│   ├── vector_store/       # Will be created during processing
-│   └── [other files...]
-├── data/                   # Create this for your dataset
-│   ├── raw/               # Place downloaded data here
+│   ├── assets/              # Store your application assets
+│   ├── data_processing/     # Data processing scripts
+│   ├── vector_store/       # FAISS index storage (auto-created)
+│   ├── main_app.py         # Main Streamlit application
+│   ├── retriever.py        # Core retrieval functionality
+│   ├── creat_summary.py    # Text summarization
+│   └── creat_faiss_index.py # Vector database management
+├── data/                   # Dataset directory
+│   ├── raw/               # Raw data storage
 │   ├── cleaned/           # Cleaned data output
 │   └── processed/         # Final processed data
-└── [other files...]
+└── requirements.txt       # Project dependencies
 ```
+
+**Note**: The `assets` and `vector_store` directories will be created during setup. You'll need to add your own application assets (logo and profile images) to the assets directory.
 
 ## Configuration
 Before running the application, you'll need to:
