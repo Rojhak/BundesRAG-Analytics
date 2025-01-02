@@ -1,0 +1,65 @@
+# Data and model directories
+vector_store/
+data/
+model_cache/
+processed_batches/
+last_pro_files/
+
+# Assets (allow specific files)
+assets/*
+!assets/image.png
+!assets/cover.jpg
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and databases
+*.log
+logs/
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+*.json
+*.csv
+!data_processing/sample_data/*.csv
+*.index 
